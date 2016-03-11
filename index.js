@@ -1,6 +1,6 @@
 'use strict';
 
-export function linear(length, rotation) {
+function linear(length, rotation) {
     var curve = new Float32Array(length),
         i, x,
         scale = length - 1;
@@ -19,7 +19,7 @@ export function linear(length, rotation) {
     return curve;
 }
 
-export function exponential(length, rotation) {
+function exponential(length, rotation) {
     var curve = new Float32Array(length),
         i, x,
         scale = length - 1,
@@ -36,7 +36,7 @@ export function exponential(length, rotation) {
 }
 
 //creating a curve to simulate an S-curve with setValueCurveAtTime.
-export function sCurve(length, rotation) {
+function sCurve(length, rotation) {
     var curve = new Float32Array(length),
         i,
         phase = (rotation > 0) ? Math.PI/2 : -(Math.PI/2);
@@ -48,7 +48,7 @@ export function sCurve(length, rotation) {
 }
 
 //creating a curve to simulate a logarithmic curve with setValueCurveAtTime.
-export function logarithmic(length, base, rotation) {
+function logarithmic(length, base, rotation) {
     var curve = new Float32Array(length),
         index,
         x = 0,
@@ -64,3 +64,10 @@ export function logarithmic(length, base, rotation) {
 
     return curve;
 }
+
+module.exports = {
+    linear: linear,
+    exponential: exponential,
+    sCurve: sCurve,
+    logarithmic: logarithmic
+};

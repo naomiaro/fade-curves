@@ -1,7 +1,8 @@
 {
   "name": "fade-curves",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility lib to create common fade curves - linear, exponential, logarithmic, and sCurve",
+  "website": "http://naomiaro.github.io",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
